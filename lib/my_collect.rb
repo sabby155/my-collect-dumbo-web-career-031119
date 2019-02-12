@@ -1,9 +1,11 @@
-def my_collect 
-  yield
-end   
-
-my_collect do |thing|
-  while thing.length != 0
-  thing
-  end
+def my_collect(array) 
+  i = 0 
+  result = []
+  while i < array.length
+  result << yield(array[i])
+  i += 1
+   end
+ result 
 end 
+
+
